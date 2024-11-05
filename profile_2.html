@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Main background section */
+        .main-image-section {
+            background-image: url('./image/Mask group.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+        }
+
+        /* Top Buttons */
+        /* .top-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .top-buttons .btn {
+            background-color: rgba(0, 128, 255, 0.5);
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-size: 0.9rem;
+        } */
+
+        .top-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            overflow-x: auto;
+
+
+        }
+
+        .top-buttons .btn {
+            background-color: rgba(0, 128, 255, 0.5);
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 15px;
+            font-size: 1.3rem;
+            flex: 0 0 auto;
+
+        }
+
+
+
+
+
+        /* Profile card */
+        .profile-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: black;
+            margin-left: 57px;
+            margin-right: auto;
+            position: relative;
+
+        }
+
+        .profile-card img {
+            width: 226px;
+            height: 229px;
+            object-fit: cover;
+        }
+
+        .hamburger {
+            position: absolute;
+            top: 10px;
+            right: -9px;
+            background: transparent;
+            border: none;
+            color: black;
+            font-size: 24px;
+
+        }
+
+
+
+        .profile-info h5 {
+            font-weight: bold;
+        }
+
+        .profile-info p {
+            margin: 7px 25px;
+            font-size: 30px;
+            gap: 10px;
+        }
+
+
+
+        /* Bottom Buttons */
+        .bottom-buttons {
+            display: flex;
+            gap: 30px;
+            flex-wrap: nowrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .bottom-buttons .btn {
+            background-color: rgba(0, 128, 0, 0.5);
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-size: 20px;
+            flex: 1;
+
+        }
+
+        /*  hero section */
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E4FCF6;
+
+        }
+
+        .hero-section2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E4FCF6;
+
+        }
+
+        .hero-section3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E4FCF6;
+
+        }
+        .hero-section4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E4FCF6;
+
+        }
+
+        .my-favourite {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E4FCF6;
+
+        }
+        .my-favourite2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E4FCF6;
+
+        }
+        .my-favourite3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E4FCF6;
+
+        }
+        .my-favourite4 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E4FCF6;
+
+        }
+
+        .bordered-div {
+            background-color: #E8CEFF;
+            font-weight: bold;
+            width: 1235px;
+            height: 62px;
+            padding: 0 18px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 40px;
+            color: #333;
+
+        }
+
+  
+
+        .bordered-div5 {
+            background-color: #E8CEFF;
+            font-weight: bold;
+            width: 1235px;
+            height: 62px;
+            padding: 0 18px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            font-size: 40px;
+            color: #333;
+
+        }
+
+        .bordered-div2 {
+            background-color: #CBFFDB;
+            font-weight: bold;
+            width: 65%;
+            /* Adjust width as needed */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .bordered-div3 {
+            background-color: #CAFFF2;
+            font-weight: bold;
+            width: 65%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .bordered-div4 {
+            background-color: #CBFFDB;
+            font-weight: bold;
+            width: 65%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+
+        .bordered-div6 {
+            background-color: #CBFFDB;
+            font-weight: bold;
+            width: 65%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+        .bordered-div7 {
+            background-color: #CAFFF2;
+            font-weight: bold;
+            width: 65%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+        .bordered-div8 {
+            background-color: #CBFFDB;
+            font-weight: bold;
+            width: 65%;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+        .content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .profile-image {
+            width: 10%;
+            height: auto;
+        }
+
+
+
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .main-image-section {
+                height: auto;
+                padding: 20px;
+            }
+
+            .top-buttons {
+                gap: 5px;
+
+            }
+
+            .profile-card {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.9);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                box-shadow: none;
+                width: 70%;
+                max-width: 100%;
+                text-align: left;
+                margin-left: -1px;
+            }
+
+            .profile-card img {
+                width: 120px;
+                height: 120px;
+                border-radius: 15px;
+                object-fit: cover;
+            }
+
+            .profile-info p {
+                font-size: 0.9rem;
+                margin: 0;
+            }
+
+
+            .bottom-buttons {
+                gap: 5px;
+                padding: 0 10px;
+            }
+
+            .bottom-buttons .btn {
+                padding: 5px;
+                font-size: 0.8rem;
+            }
+
+            .bordered-div {
+                width: 350px;
+                height: 30px;
+                padding: 5px;
+                font-size: 0.9rem;
+            }
+
+            .bordered-div2 {
+                background-color: #CBFFDB;
+                font-weight: bold;
+                width: 350px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                color: #333;
+                font-size: 12px;
+            }
+
+            .bordered-div3 {
+                background-color: #CAFFF2;
+                font-weight: bold;
+                width: 350px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                color: #333;
+                font-size: 12px;
+            }
+
+            .bordered-div4 {
+                background-color: #CBFFDB;
+                font-weight: bold;
+                width: 350px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                color: #333;
+                font-size: 12px;
+            }
+            .bordered-div5 {
+                background-color: #E8CEFF;
+                font-weight: bold;
+                width: 350px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                color: #333;
+                font-size: 12px;
+            }
+            .bordered-div6 {
+                background-color: #CBFFDB;
+                font-weight: bold;
+                width: 350px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                color: #333;
+                font-size: 12px;
+            }
+            .bordered-div7 {
+                background-color: #CAFFF2;
+                font-weight: bold;
+                width: 350px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                color: #333;
+                font-size: 12px;
+            }
+            .bordered-div8 {
+                background-color: #CBFFDB;
+                font-weight: bold;
+                width: 350px;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                color: #333;
+                font-size: 12px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main-image-section">
+        <!-- Top Buttons -->
+        <div class="top-buttons">
+            <button class="btn">Performance Management</button>
+            <button class="btn">Style Selection</button>
+            <button class="btn">Feedback</button>
+            <button class="btn dropdown-toggle" type="button" id="hamburgerMenu" data-bs-toggle="dropdown"
+                aria-expanded="false">&#9776;</button>
+
+            <ul class="dropdown-menu" aria-labelledby="hamburgerMenu">
+                <li><a class="dropdown-item" href="#">Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Item 3</a></li>
+            </ul>
+        </div>
+
+
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <img src="./image/girls.png" alt="Profile Picture">
+            <button class="btn dropdown-toggle hamburger" type="button" id="hamburgerMenu" data-bs-toggle="dropdown"
+                aria-expanded="false">&#9776;</button>
+
+            <ul class="dropdown-menu" aria-labelledby="hamburgerMenu">
+                <li><a class="dropdown-item" href="#">Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Item 3</a></li>
+            </ul>
+            <div class="profile-info">
+                <p><strong>User Name</strong><br>
+                    Class<br>School<br>City | Country<br>IB Points</p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Buttons -->
+        <div class="bottom-buttons mt-2">
+            <button class="btn">My Activism</button>
+            <button class="btn">My Archive</button>
+            <button class="btn">Knowledge Sharing</button>
+            <button class="btn">Sharing EduResources</button>
+        </div>
+    </section>
+
+    <section class="hero-section ">
+        <div class="bordered-div mt-4">
+            My Intro
+        </div>
+    </section>
+
+    <section class="hero-section2">
+        <div class="bordered-div2 mt-4">
+            <h1>About Me1</h1>
+            <div class="content">
+                <img src="./image/123.png" alt="Profile Image" class="profile-image">
+                <p>Write here to show how it works in real world line 2: see how much I can write +More</p>
+            </div>
+        </div>
+    </section>
+    <section class="hero-section3">
+        <div class="bordered-div3 mt-4">
+            <h1>About Me2</h1>
+            <div class="content">
+                <img src="./image/123.png" alt="Profile Image" class="profile-image">
+                <p>Write here to show how it works in real world line 2: see how much I can write +More</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-section4">
+        <div class="bordered-div4 mt-4">
+            <h1>About Me3</h1>
+            <div class="content">
+                <img src="./image/123.png" alt="Profile Image" class="profile-image">
+                <p>Write here to show how it works in real world line 2: see how much I can write +More</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-favourite ">
+        <div class="bordered-div5 mt-4">
+            My Favourite
+        </div>
+    </section>
+
+    <section class="my-favourite2">
+        <div class="bordered-div6 mt-4">
+            <h1>About Me4</h1>
+            <div class="content">
+                <img src="./image/123.png" alt="Profile Image" class="profile-image">
+                <p>Write here to show how it works in real world line 2: see how much I can write +More</p>
+            </div>
+        </div>
+    </section>
+    <section class="my-favourite3">
+        <div class="bordered-div7 mt-4">
+            <h1>About Me5</h1>
+            <div class="content">
+                <img src="./image/123.png" alt="Profile Image" class="profile-image">
+                <p>Write here to show how it works in real world line 2: see how much I can write +More</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="my-favourite4">
+        <div class="bordered-div8 mt-4">
+            <h1>About Me6</h1>
+            <div class="content">
+                <img src="./image/123.png" alt="Profile Image" class="profile-image">
+                <p>Write here to show how it works in real world line 2: see how much I can write +More</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+</body>
+
+</html>

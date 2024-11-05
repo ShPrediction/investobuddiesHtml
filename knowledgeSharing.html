@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Main background section */
+        .main-image-section {
+            background-image: url('./image/Mask group.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+        }
+
+
+        .top-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+            overflow-x: auto;
+
+
+        }
+
+        .top-buttons .btn {
+            background-color: rgba(0, 128, 255, 0.5);
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 15px;
+            font-size: 1.3rem;
+            flex: 0 0 auto;
+
+        }
+
+
+        /* Profile card */
+        .profile-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: black;
+            margin-left: 57px;
+            margin-right: auto;
+            position: relative;
+
+        }
+
+        .profile-card img {
+            width: 226px;
+            height: 229px;
+            object-fit: cover;
+        }
+
+        .hamburger {
+            position: absolute;
+            top: 10px;
+            right: -9px;
+            background: transparent;
+            border: none;
+            color: black;
+            font-size: 24px;
+
+        }
+
+
+        .profile-info h5 {
+            font-weight: bold;
+        }
+
+        .profile-info p {
+            margin: 7px 25px;
+            font-size: 30px;
+            gap: 10px;
+        }
+
+
+
+        /* Bottom Buttons */
+        .bottom-buttons {
+            display: flex;
+            gap: 30px;
+            flex-wrap: nowrap;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .bottom-buttons .btn {
+            background-color: rgba(0, 128, 0, 0.5);
+            color: #fff;
+            border: none;
+            border-radius: 20px;
+            padding: 5px 10px;
+            font-size: 20px;
+            flex: 1;
+
+        }
+
+        /*  hero section */
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #E4FCF6;
+
+        }
+
+
+        /*header end*/
+
+        .body2{
+            background-color: #e3f8e6;
+        }
+
+
+        .knowledge-section {
+            width: 100%;
+            max-width: 600px;
+            background-color: #e3f8e6;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        .knowledge-header {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px #ccc;
+        }
+
+        /* Button Row */
+        .button-row {
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+            padding: 10px 0;
+            justify-content: center;
+            white-space: nowrap;
+        }
+
+        .category-button {
+            background-color: #a5e4d5;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 0.9em;
+            cursor: pointer;
+            color: #333;
+            transition: background-color 0.3s;
+        }
+
+        .category-button:hover {
+            background-color: #76c9ad;
+        }
+
+        /* Main Content Area Styling */
+        .content-area {
+            background-color: #c2f0ce;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .content-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #2A681F;
+            margin-bottom: 20px;
+        }
+
+        /* Toggle Buttons */
+        .toggle-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .toggle-button {
+            background-color: #a5e4d5;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 1em;
+            cursor: pointer;
+            color: #333;
+            transition: background-color 0.3s;
+        }
+
+        .toggle-button.active,
+        .toggle-button:hover {
+            background-color: #76c9ad;
+        }
+
+        /* Table Styling */
+        .content-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .content-table th,
+        .content-table td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+            color: #333;
+        }
+
+        .content-table th {
+            background-color: #a5e4d5;
+        }
+
+        .content-table td a {
+            color: #2A681F;
+            text-decoration: none;
+        }
+
+        /* Bottom Buttons */
+        .bottom-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .bottom-button {
+            background-color: #a5e4d5;
+            border: none;
+            border-radius: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            color: #333;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .bottom-button:hover {
+            background-color: #76c9ad;
+        }
+
+
+
+
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .main-image-section {
+                height: auto;
+                padding: 20px;
+            }
+
+            .top-buttons {
+                gap: 5px;
+
+            }
+
+            .profile-card {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 10px;
+                padding: 10px;
+                background-color: rgba(255, 255, 255, 0.9);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                box-shadow: none;
+                width: 70%;
+                max-width: 100%;
+                text-align: left;
+                margin-left: -1px;
+            }
+
+            .profile-card img {
+                width: 120px;
+                height: 120px;
+                border-radius: 15px;
+                object-fit: cover;
+            }
+
+            .profile-info p {
+                font-size: 0.9rem;
+                margin: 0;
+            }
+
+
+            .bottom-buttons {
+                gap: 5px;
+                padding: 0 10px;
+            }
+
+            .bottom-buttons .btn {
+                padding: 5px;
+                font-size: 0.8rem;
+            }
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <section class="main-image-section">
+        <!-- Top Buttons -->
+        <div class="top-buttons">
+            <button class="btn">Performance Management</button>
+            <button class="btn">Style Selection</button>
+            <button class="btn">Feedback</button>
+            <button class="btn dropdown-toggle" type="button" id="hamburgerMenu" data-bs-toggle="dropdown"
+                aria-expanded="false">&#9776;</button>
+
+            <ul class="dropdown-menu" aria-labelledby="hamburgerMenu">
+                <li><a class="dropdown-item" href="#">Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Item 3</a></li>
+            </ul>
+        </div>
+
+
+
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <img src="./image/girls.png" alt="Profile Picture">
+            <button class="btn dropdown-toggle hamburger" type="button" id="hamburgerMenu" data-bs-toggle="dropdown"
+                aria-expanded="false">&#9776;</button>
+
+            <ul class="dropdown-menu" aria-labelledby="hamburgerMenu">
+                <li><a class="dropdown-item" href="#">Item 1</a></li>
+                <li><a class="dropdown-item" href="#">Item 2</a></li>
+                <li><a class="dropdown-item" href="#">Item 3</a></li>
+            </ul>
+            <div class="profile-info">
+                <p><strong>User Name</strong><br>
+                    Class<br>School<br>City | Country<br>IB Points</p>
+            </div>
+
+        </div>
+
+        <!-- Bottom Buttons -->
+        <div class="bottom-buttons mt-2">
+            <button class="btn">My Activism</button>
+            <button class="btn">My Archive</button>
+            <button class="btn">Knowledge Sharing</button>
+            <button class="btn">Sharing EduResources</button>
+        </div>
+    </section>
+
+    <section class="container d-flex justify-content-center my-5 body2">
+        <div class="knowledge-section">
+            <!-- Header -->
+            <div class="knowledge-header">Knowledge Sharing</div>
+
+            <!-- Category Buttons -->
+            <div class="button-row">
+                <button class="category-button">Peer Tutoring Support</button>
+                <button class="category-button">Mentorship</button>
+                <button class="category-button">Skill Sharing</button>
+            </div>
+
+            <!-- Main Content Area -->
+            <div class="content-area">
+                <div class="content-title">Peer Tutoring Support</div>
+
+                <!-- Toggle Buttons -->
+                <div class="toggle-buttons">
+                    <button class="toggle-button active">Receive Tuition</button>
+                    <button class="toggle-button">Offer Tuition</button>
+                </div>
+
+                <!-- Table -->
+                <table class="content-table">
+                    <thead>
+                        <tr>
+                            <th>Sl</th>
+                            <th>Subject</th>
+                            <th>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>Mathematics</td>
+                            <td><a href="#">Click here</a></td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Grammar</td>
+                            <td><a href="#">Click here</a></td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>Computing</td>
+                            <td><a href="#">Click here</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Bottom Buttons -->
+                <div class="bottom-buttons">
+                    <button class="bottom-button">Add More</button>
+                    <button class="bottom-button">Edit</button>
+                </div>
+            </div>
+        </div>
+    </section>

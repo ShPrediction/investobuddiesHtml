@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page Design</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Main background section */
+        .main-image-section {
+            background-image: url('./image/Mask group.png'); 
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: #fff;
+        }
+
+        /* Top Buttons */
+        .top-buttons {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .top-buttons .btn {
+            background-color: rgba(0, 128, 255, 0.5);
+            color: #fff;
+            border: none;
+            margin: 0 25px; 
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        .spacing {
+            margin-right: 15px; 
+        }       
+
+        .spacing:last-child {
+            margin-right: 0; 
+        }
+
+        /* Profile card */
+        .profile-card {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: absolute; 
+            left: 20px; 
+            top: 50%;
+            transform: translateY(-50%); 
+            color: black;
+        }
+
+        .profile-card img {
+            width: 226px;
+            height: 229px;
+            object-fit: cover;
+        }
+
+        .profile-info h5 {
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* Bottom Buttons */
+        .bottom-buttons {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bottom-buttons .btn {
+            background-color: rgba(0, 128, 0, 0.5);
+            color: #fff;
+            border: none;
+            margin: 0 5px;
+            border-radius: 20px;
+            padding: 10px 20px;
+        }
+
+        .dropdown-toggle {
+            margin-left: 10px; 
+            color: #fff; 
+            background: transparent; 
+            border: none; 
+            font-size: 1.5rem; 
+        }
+
+        .dropdown-menu {
+            right: 0; 
+        }
+
+        .toggle2 {
+            margin-left: auto; 
+            margin-right: 15px; 
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 768px) {
+            .main-image-section {
+                height: auto; /* Adjust height for mobile */
+                padding: 20px; /* Add some padding */
+            }
+
+            .top-buttons .btn {
+                padding: 8px 12px; /* Smaller button padding */
+                margin: 0 10px; /* Smaller margin */
+                font-size: 0.9rem; /* Smaller font size */
+            }
+
+            .profile-card {
+                width: 90%; /* Make card wider on mobile */
+                flex-direction: column; /* Stack elements vertically */
+                align-items: center; /* Center content */
+                padding: 10px; /* Smaller padding */
+            }
+
+            .profile-card img {
+                width: 90%; /* Responsive image */
+                height: auto; /* Maintain aspect ratio */
+                max-width: 150px; /* Limit max width */
+            }
+
+            .profile-info h5 {
+                font-size: 1rem; /* Smaller name font */
+            }
+
+            .profile-info p {
+                font-size: 0.8rem; /* Smaller paragraph font */
+                margin: 0; /* Remove margin */
+            }
+
+            .bottom-buttons .btn {
+                padding: 8px 10px; /* Smaller button padding */
+                font-size: 0.8rem; /* Smaller font size */
+            }
+
+            .dropdown-toggle {
+                font-size: 1.2rem; /* Smaller hamburger icon */
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="main-image-section">
+        <!-- Top Buttons -->
+        <div class="top-buttons">
+            <button class="btn spacing">Performance Management</button>
+            <button class="btn spacing">Style Selection</button>
+            <button class="btn spacing">Feedback</button>
+        
+            <!-- Hamburger Menu -->
+            <div class="dropdown">
+                <button class="btn dropdown-toggle toggle2" type="button" id="hamburgerMenu" data-bs-toggle="dropdown" aria-expanded="false">
+                    &#9776; <!-- Hamburger icon -->
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="hamburgerMenu">
+                    <li><a class="dropdown-item" href="#">Item 1</a></li>
+                    <li><a class="dropdown-item" href="#">Item 2</a></li>
+                    <li><a class="dropdown-item" href="#">Item 3</a></li>
+                    <li><a class="dropdown-item" href="#">Item 4</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Profile Card -->
+        <div class="profile-card">
+            <img src="./image/girls.png" alt="Profile Picture"> <!-- Replace with actual profile image -->
+            <div class="profile-info">
+                <h5>User Name</h5>
+                <p>Class<br>School<br>City | Country<br>IB Points</p>
+            </div>
+        </div>
+    
+        <!-- Bottom Buttons -->
+        <div class="bottom-buttons">
+            <button class="btn">My Activism</button>
+            <button class="btn">My Archive</button>
+            <button class="btn">Knowledge Sharing</button>
+            <button class="btn">Sharing EduResources</button>
+        </div>
+    </section>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
