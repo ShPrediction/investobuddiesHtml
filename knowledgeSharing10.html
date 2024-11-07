@@ -120,60 +120,56 @@
         }
 
 
-        /*header end*/
-
-        .body2 {
-            background-color: #e3f8e6;
-        }
-
-
-        .knowledge-section {
-            width: 100%;
-            /* max-width: 600px; */
-            background-color: #E4FCF6;
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
+        .tutor-form-section {
+            background-color: #b8f5c5;
+            padding: 2rem;
+            border-radius: 12px;
+            max-width: 1300px;
             margin: auto;
+            text-align: center;
         }
-
-        .knowledge-header {
-            font-size: 1.8em;
+        
+        h2 {
             font-weight: bold;
-            /* color: #333; */
-            margin-bottom: 20px;
-            text-shadow: 1px 1px #ccc;
+            margin-bottom: 1rem;
+            color: #4a4a4a;
+        }
+        
+        .btn-group {
+            margin-bottom: 1.5rem;
         }
 
-        /* Button Row */
-        .button-row {
-            /* display: flex; */
-            gap: 10px;
-            overflow-x: auto;
-            padding: 10px 0;
-            justify-content: center;
-            white-space: nowrap;
-        }
-
-        .category-button {
-            background-color: #CAFFF2;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        .btn-group .btn {
+            background-color: #8fd3c1;
+            font-size: 20px;
+            color: #fff;
             border: none;
-            border-radius: 20px;
-            padding: 8px 16px;
-            font-size: 0.9em;
-            cursor: pointer;
-            color: #333;
-            transition: background-color 0.3s;
+            margin: 0 0.5rem;
+           
+        }
+        
+        .form-control {
+            background-color: #efffed;
+            border: 1px solid #cfcfcf;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+        }
+        
+        .btn-profile,
+        .btn-messages {
+            background-color: #98c790;
+            color: #fff;
+            border: none;
+            padding: 0.7rem;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+        .form-label{
+            margin-left: -1110px;
         }
 
-        .category-button:hover {
-            background-color: #9FD28A;
-        }
 
-        /* Main Content Area Styling */
         .content-area {
-            background-color: #CBFFDB;
             border-radius: 10px;
             padding: 20px;
             margin-top: 20px;
@@ -203,64 +199,65 @@
             cursor: pointer;
             color: #333;
             transition: background-color 0.3s;
+            font-weight: bold;
         }
 
         .toggle-button.active,
         .toggle-button:hover {
-            background-color: #76c9ad;
+            background-color: #9FD28A;
         }
 
-        /* Table Styling */
-        .content-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
+        
+        /* Mobile Styling */
+        @media (max-width: 576px) {
+            .tutor-form-section {
+                padding: 1rem;
+                margin: 1rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .btn-group .btn {
+                font-size: 10px;
+                padding: 0.5rem 0.8rem;
+            }
+
+            .btn-profile,
+            .btn-messages {
+                font-size: 0.9rem;
+                padding: 0.6rem;
+            }
+            .form-label{
+            margin-left: -180px;
         }
 
-        .content-table th,
-        .content-table td {
-            border: 1px solid #333;
-            padding: 10px;
-            text-align: center;
-            color: #333;
-        }
-
-        .content-table th {
-            background-color: #a5e4d5;
-        }
-
-        .content-table td a {
-            color: #2A681F;
-            text-decoration: none;
-        }
-
-        /* Bottom Buttons */
-        .bottom-buttons {
+        .toggle-buttons {
             display: flex;
             gap: 10px;
             justify-content: center;
-            margin-top: 20px;
+            margin-bottom: 20px;
         }
 
-        .bottom-button {
+        .toggle-button {
             background-color: #CEF7BE;
             border: none;
             border-radius: 20px;
-            padding: 10px 20px;
+            padding: 8px 16px;
             font-size: 1em;
-            color: #333;
             cursor: pointer;
+            color: #333;
             transition: background-color 0.3s;
-            margin-right: -51px;
-            margin-left: 60px;
-        }
-
-        .bottom-button:hover {
-            background-color: #76c9ad;
+            font-size: 12px;
+            font-weight: bold;
         }
 
 
 
+
+
+        }
 
 
         /* Mobile Styles */
@@ -269,6 +266,10 @@
                 height: auto;
                 padding: 20px;
             }
+
+            .form-label{
+            margin-left: -180px;
+        }
 
             .top-buttons {
                 gap: 5px;
@@ -313,9 +314,25 @@
                 font-size: 0.8rem;
             }
 
+            .toggle-buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
 
-
-
+        .toggle-button {
+            background-color: #CEF7BE;
+            border: none;
+            border-radius: 20px;
+            padding: 8px 16px;
+            font-size: 1em;
+            cursor: pointer;
+            color: #333;
+            transition: background-color 0.3s;
+            font-size: 12px;
+            font-weight: bold;
+        }
 
 
 
@@ -324,7 +341,7 @@
     </style>
 </head>
 
-<body>
+<body style="background-color: #E4FCF6;">
     <section class="main-image-section">
         <!-- Top Buttons -->
         <div class="top-buttons">
@@ -370,68 +387,42 @@
         </div>
     </section>
 
-    <section>
-        <div class="knowledge-section">
-            <!-- Header -->
-            <div class="knowledge-header">Knowledge Sharing</div>
-
-            <!-- Category Buttons -->
-            <div class="button-row">
-                <button class="category-button" style="background-color: #97DDD7;">Peer Tutoring Support</button>
-                <button class="category-button">Mentorship</button>
-                <button class="category-button">Skill Sharing</button>
-            </div>
-
-            <!-- Main Content Area -->
-            <div class="content-area">
-                <div class="content-title">Peer Tutoring Support</div>
-
-                <!-- Toggle Buttons -->
-                <div class="toggle-buttons">
-                    <button class="toggle-button active">Receive Tuition</button>
-                    <button class="toggle-button">Offer Tuition</button>
-                </div>
-            </div>
-
-            <div>
-                <h3>Receive Tuition</h3>
-            </div>
-
-
-            <div style=" background-color: #E4FCF6;">
-                <table class="content-table">
-                    <thead>
-                        <tr>
-                            <th>Sl</th>
-                            <th>Subject</th>
-                            <th>Details</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Mathematics</td>
-                            <td><a href="#">Click here</a></td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>Grammar</td>
-                            <td><a href="#">Click here</a></td>
-                        </tr>
-                        <tr>
-                            <td>3</td>
-                            <td>Computing</td>
-                            <td><a href="#">Click here</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-
-                <!-- Bottom Buttons -->
-                <div class="bottom-buttons">
-                    <button class="bottom-button">Add More</button>
-                    <button class="bottom-button">Edit</button>
-                </div>
-            </div>
+    <section class="tutor-form-section">
+        <h2>Knowledge Sharing</h2>
+        <div class="btn-group" role="group">
+            <button type="button" class="btn" style="background-color: #CAFFF2;color: black;font-weight: bold;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">Peer Tutoring Support</button>
+            <button type="button" class="btn" style="background-color: #97DDD7;color: black;font-weight: bold;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">Mentorship</button>
+            <button type="button" class="btn" style="background-color: #CAFFF2;color: black;font-weight: bold; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">Skill Sharing</button>
         </div>
 
+        <div class="content-area">
+            <!-- Toggle Buttons -->
+            <div class="toggle-buttons">
+                <button class="toggle-button active">Individual Mentor</button>
+                <button class="toggle-button">Institutional Mentor</button>
+            </div>
+        </div>
+    
+        <h3>Detail of Individual Mentor</h3>
+        <form>
+            <input type="text" class="form-control" placeholder="Full Name" required>
+            <input type="email" class="form-control" placeholder="Designation, Company" required>
+            <input type="text" class="form-control" placeholder="City, Country" required>
+            <input type="text" class="form-control" placeholder="Email" required>
+            <input type="text" class="form-control" placeholder="Why me" required>
+            <input type="url" class="form-control" placeholder="Website">
+            <label class="form-label" >My Portfolio</label>
+            <input type="file" class="form-control">
+            <button type="button" class="btn-profile" style="background-color: #9FD28A;color:black;font-weight:bold;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">Profile</button>
+            <button type="button" class="btn-messages"  style="background-color: #CEF7BE;color:black;font-weight:bold;box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);">Messages</button>
+        </form>
     </section>
+
+
+</body>
+
+
+
+
+
+
